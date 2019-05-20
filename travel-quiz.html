@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>15 vocabulary items about travel</title>
+  <meta name="description" content="jQuery plugin allowing a creating of fill in the blank quiz">
+  <meta name="keywords" content="jquery plugin, fill in the blank, javascript, jquery, fill, blank" />
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/quizyfillblank.css">
+  
+  <style>
+  body{
+    font-family:Helvetica, Arial, Verdana; 
+    background: url('img/bg-tile.jpg') repeat;
+  }
+  
+  .quizy-fitb-answer{
+    font-size:1.5em;
+    width: 200px !important;
+   }
+  .text-style1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:1.8em;
+    line-height: 1.6 !important;
+    margin-top:20px;
+    text-align:center;
+    line-height:24px;
+  }
+  
+  .text-style2{
+    font-style:italic;
+    color:#777;
+  }
+  
+  .text-style3{
+    width:200px;
+    margin:auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  </style>
+  
+</head>
+<body>
+
+  <h1>15 vocabulary items about <a href="https://www.allthingstopics.com/travel.html">travel</a></h1>
+  <h2>Using <a href="https://github.com/frenski/quizy-fillintheblank"> Quizy</a> jQuery fill in the blank plugin</h2>
+  
+  <div id="main" role="main">
+    
+    <div id="tutorial-fillblank">
+      <div class="text-style2">Drag the items to the correct blank spaces<br>(the correct answers will appear once you drag the last item)</div>
+      <div id="fillblank-text" class='text-style1'></div><br><br>
+      <div id="fillblank-ph" class='text-style3'></div>
+    </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+
+  <script src="js/jquery.quizyfillblank.min.js"></script>
+  
+  <script>
+    $('#tutorial-fillblank').quizyFillBlank({
+          textItems:['It’s usually a great idea to travel with a good ', 
+                     ' so you don’t get lost. The Eiffel Tower in Paris and the Great Pyramids of  Egypt are very famous ', 
+		     's. I always buy lots of  ', 
+                     's  when I travel because I like to remember the places I travelled to. What time does our flight leave, or ', 
+                     ' ? When will you get there, or ',
+		     ' ? Where can I buy a train ',
+                     ' ? Last month, when I was in Chile, I sent mygrandmother a ',
+                     ' of Santiago. Our flight leaves from Gate 43, but I don’t know where Gate 43 is. Let’s ask the ',
+                     ' . My family and I are flying to Taiwan tomorrow, so weneed to go to the ',
+		     '  airport. Between four and five million ',
+                     's visit Tokyo each year. The way my face looks changes as I get older, so I need to get a new ',
+                     ' every ten years. Don’t forget to bring everything you need in your ',
+                     ' . We’ll be travelling for two weeks. Should we travel with a tour group and take our cameras when we ',
+                     ' around the city? Did you enjoy your ',
+                     ' to Dubai? After we arrive in Berlin, we’ll check-in at a nice ',
+                     ' and get some rest.'
+          ],
+          anItems:['arrive', 'depart', 'hotel', 'information desk', 'international', 'landmark', 'luggage', 'map', 'passport', 'postcard', 'sightsee', 'souvenir', 'ticket', 'tourist', 'trip'], 
+          anItemsCorrect:[7,5,11,1,0,12,9,3,4,13,8,6,10,14,2],
+          blockSize:250
+        });
+  </script>
+</body>
+</html>
